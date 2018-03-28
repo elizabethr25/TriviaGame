@@ -1,0 +1,38 @@
+body {
+    background-color: lightyellow;
+    font-family: 'Franklin Gothic Medium', 'Arial', Arial, sans-serif;
+}
+
+.maindiv {
+    background-color: lightblue;
+    width: 800px;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 50px;
+}
+
+#header {
+    font-size: 30px;
+    text-align: center;
+}
+
+#timediv {
+    margin: 10px;
+    text-align: center;
+}
+
+#time {
+    font-size: 18px;
+    line-height: 2;
+}
+
+.questionsp {
+    font-size: 20px;
+    text-align: center;
+}
+
+form {
+    line-height: 2;
+    text-align: center;
+}
+

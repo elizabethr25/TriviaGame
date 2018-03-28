@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel "javascript" type="text/javascript" href="assets/javascript/app.js">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <title> Trivia Game</title>
+
+</head>
+
+<body>
+
+    <div class="maindiv">
+
+        <div id="header">
+            <h1>Harry Potter Trivia!</h1>
+        </div>
+
+        <div id="timediv">
+            <p id="time"> Time Remaining: </p>
+        </div>
+
+      
+
+        <div id="questionsdiv">
+            <p class="questionsp">1. When is Harry Potter's birthday? </p>
+            <form>
+                <input type="radio" name="birthday" value="june22"> June 22nd
+                <input type="radio" name="birthday" value="july4"> July 4th
+                <input type="radio" name="birthday" value="july31"> July 31st
+            </form>
+
+            <br>
+
+            <p class="questionsp">2. Who was the Potion's Master in Harry's first year at       Hogwarts?</p>
+            <form>
+                <input type="radio" name="potions" value="slughorn"> Horace Slughorn
+                <input type="radio" name="potions" value="snape"> Severus Snape 
+                <input type="radio" name="potions" value="hagrid"> Hagrid 
+            </form>
+
+            <br>
+
+            <p class="questionsp">3. What is the only antidote to Basilisk venom?</p>
+            <form>
+                <input type="radio" name="antidote" value="phoenix"> Phoenix Tears
+                <input type="radio" name="antidote" value="draught"> Draught of Living Death
+                <input type="radio" name="antidote" value="pumpkin"> Pumpkin Juice
+            </form>
+
+            <br>
+
+            <p class="questionsp">4. How many Triwizard Champions were there in <i> Harry Potter and the Goblet of Fire? </i> </p>
+            <form>
+                <input type="radio" name="champions" value="four"> Four
+                <input type="radio" name="champions" value="three"> Three
+                <input type="radio" name="champions" value="seven"> Seven 
+            </form>
+
+            <br>
+
+            <p class="questionsp">5. In <i> Harry Potter and the Prisoner of Azkaban </i> where does the Knight Bus drop Harry off?</p>
+            <form>
+                <input type="radio" name="bus" value="hogwarts"> Hogwarts
+                <input type="radio" name="bus" value="leakycauldron"> The Leaky Cauldron 
+                <input type="radio" name="bus" value="kingscross"> King's Cross Station 
+            </form>
+
+            <br>
+
+            <p class="questionsp">6. Which of the following characters were never masters of the Elder Wand?</p>
+            <form>
+                <input type="radio" name="elderwand" value="malfoy"> Draco Malfoy
+                <input type="radio" name="elderwand" value="voldemort"> Lord Voldemort 
+                <input type="radio" name="elderwand" value="dumbledore"> Albus Dumbledore 
+            </form>
+        </div>
+
+        <button id="submit">Submit Quiz!</button>
+
+    </div>
+
+    <div id="resultsdiv">Results</div>
+
+</body>
+
+<script src="assets/javascript/app.js"></script>
+
+</html>
