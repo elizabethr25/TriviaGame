@@ -96,11 +96,6 @@ $(document).ready(function () {
         document.getElementById("#resultsdiv").innerHTML = "You got " + correct + " out of 3 correct!";
         document.getElementById("#resultsdiv").innerHTML = "You got " + incorrect + " incorrect!";
     }
-
-
-
-
-
 });
 
 
