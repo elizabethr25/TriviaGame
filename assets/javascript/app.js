@@ -1,5 +1,13 @@
 $(document).ready(function () {
 
+    // $(".maincontainer").load(function () {
+    //     console.log("hidden");
+    // });
+
+    // $("#start").click(function () {
+    //     console.log("started");
+    // });
+
     var timer = 10;
     var intervalId;
 
@@ -25,6 +33,7 @@ $(document).ready(function () {
 
     var correct = 0;
     var incorrect = 0;
+    var unanswered = 0;
 
     var questionsArr = [
         {
@@ -55,12 +64,14 @@ $(document).ready(function () {
         var $p = $("<p>" + item.question + "</p>");
         $div.append($p);
         item.choices.forEach(function (choice) {
-            var $input = $('<input value=${choice} name="${item.name}" type="radio">');
+            var $input = $(`<input value=${choice} name="${item.name}" type="radio">`);
             var $label = $("<label>").text(choice);
             $div.append($input).append($label);
         });
         $form.append($div);
     });
+
+
 
     $form.append($('<button type="submit" id="submit"> Submit! </button>'));
 
@@ -71,18 +82,28 @@ $(document).ready(function () {
         $questions.each(function (index, elm) {
             var value = $(elm).children("input:checked").val();
             if (questionsArr[index].answer === value) {
-                console.log("Correct!");
                 correct++;
-                console.log ("Correct score: " + correct);
-            } else {
-                console.log("Wrong!");
+                console.log("Correct: " + correct);
+            } else if (questionsArr[index].answer != value) {
                 incorrect++;
-                console.log("Incorrect score " + incorrect);
+                console.log("Incorrect: " + incorrect);
+            } else {
+                unanswered++;
+                console.log("Unanswered: ")
             }
+            // score();
         });
     });
+
+    // function score() {
+    //     console.log("number correct:" + correct);
+    //     console.log("number incorrect: " + incorrect);
+    // }
+
 });
 
+// document.getElementById("#resultsdiv").innerHTML = "You got " + correct + " out of 3 correct!";
+// document.getElementById("#resultsdiv").innerHTML = "You got " + incorrect + " incorrect!";
 
 
     // //when submit button is pushed, time is stopped

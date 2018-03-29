@@ -36,5 +36,9 @@ form {
     text-align: center;
 }
 
+#resultsdiv {
+    text-align: center;
+    color: red;
+}
 
 
