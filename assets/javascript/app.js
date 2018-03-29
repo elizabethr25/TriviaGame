@@ -81,29 +81,28 @@ $(document).ready(function () {
         var $questions = $(this).children("div");
         $questions.each(function (index, elm) {
             var value = $(elm).children("input:checked").val();
-            if (questionsArr[index].answer === value) {
+            if (questionsArr[index].answer == value) {
                 correct++;
-                console.log("Correct: " + correct);
-            } else if (questionsArr[index].answer != value) {
+            } else if (questionsArr[index].answer !== value) {
                 incorrect++;
-                console.log("Incorrect: " + incorrect);
-            } else {
-                unanswered++;
-                console.log("Unanswered: ")
-            }
-            // score();
+            } 
         });
+        score();
     });
 
-    // function score() {
-    //     console.log("number correct:" + correct);
-    //     console.log("number incorrect: " + incorrect);
-    // }
+    function score() {
+        console.log("number correct:" + correct);
+        console.log("number incorrect: " + incorrect);
+        document.getElementById("#resultsdiv").innerHTML = "You got " + correct + " out of 3 correct!";
+        document.getElementById("#resultsdiv").innerHTML = "You got " + incorrect + " incorrect!";
+    }
+
+
+
+
 
 });
 
-// document.getElementById("#resultsdiv").innerHTML = "You got " + correct + " out of 3 correct!";
-// document.getElementById("#resultsdiv").innerHTML = "You got " + incorrect + " incorrect!";
 
 
     // //when submit button is pushed, time is stopped
